@@ -7,6 +7,7 @@ puts "If you do want that, hit RETURN."
 $stdin.gets
 
 puts "Opening the file..."
+#the 'w' means we want to open the file in write mode you can also use r or a for read or append
 target = open(filename, 'w')
 
 puts "Truncating the file.  Goodbye!"
