@@ -2,9 +2,15 @@ def gold_room
   puts "This room is full of gold.  How much do you take?"
 
   print "> "
-  choice = $stdin.gets.chomp.to_i
+  choice = $stdin.gets.chomp.
 
-  if choice < 50
+  if choice =~ /\d/
+    how_much = choice.to_i
+  else
+    dead("Man, learn to type a number.")
+  end
+
+  if how_much < 50
     puts "Nice, you're not greedy, you win!"
     exit(0)
   else
