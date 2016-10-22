@@ -21,6 +21,11 @@ $stdin use when using ARGV
 ARGV argument variable (i.e can set from command line)
 \n new line
 \\ escape for \
-""" multiline comment
-''' multiline comment doesn't work with insertion
+""" multiline string
+''' multiline string doesn't work with insertion or escapes like \n
 \t indents
+"" string
+'' string but wont accept escapes
+<<END is a heredoc, multiline string until it sees END again (Can be any word after <<)
+.reverse
+! i.e downcase! can change the state of a variable
